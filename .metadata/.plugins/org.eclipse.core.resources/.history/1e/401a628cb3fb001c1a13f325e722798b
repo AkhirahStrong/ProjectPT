@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+public class PowerTable {
+
+	public static void main(String[] args) {
+		
+Scanner scan = new Scanner(System.in);
+		
+		int ntgr; 
+		int multiple;
+		String yesNo = "";
+		
+		
+		do {
+			
+			//Take input from user
+			System.out.println("Learn your squares and cubes!");
+			System.out.println("");
+			System.out.println("Enter an integer: ");
+			ntgr = scan.nextInt();
+			
+			System.out.println("\n");
+			
+			
+			//Print out header for table
+			System.out.printf("%-15s%-15s%-15s\n", "Value", "Square", "Cube");
+			System.out.println("=====          ======         ====");
+			
+			for(int i = 1; i <= ntgr; i++) {
+				System.out.printf("%-15d%-15d%-15d\n", i,  i*i, i*i*i);
+			}
+			
+			System.out.println("\n");
+			
+			for(int i = 1; i <= 5; i++) {
+				System.out.printf("%-15s%-15s%-15s\n", i*ntgr, i*ntgr, i*ntgr);
+				//System.out.println(i + "x" + ntgr + " = " + i * ntgr);
+			}
+			
+			
+			//Ask user to continue
+			System.out.print("Would you like to continue? (y/n): ");
+			yesNo = scan.next();
+			
+			System.out.println("\n");
+			
+			if(yesNo.equalsIgnoreCase("N")) {
+		    	   System.out.println("Thank you! ");
+		       } 
+			
+			
+			System.out.println("\n");
+			
+			
+			
+		}while(yesNo.equalsIgnoreCase("Y"));
+		
+		scan.close();
+
+	}
+
+}
